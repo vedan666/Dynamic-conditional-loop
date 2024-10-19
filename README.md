@@ -82,7 +82,3 @@ resource "azurerm_storage_account" "stg" {
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-This README provides clear documentation on the dynamic conditional logic in Terraform and is structured to make the example understandable and easy to implement!
