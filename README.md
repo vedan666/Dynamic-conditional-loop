@@ -1,7 +1,3 @@
-Here's an amazing `README.md` for your **Dynamic-Conditional-Loop** in Terraform:
-
----
-
 # Dynamic Conditional Loop in Terraform
 
 This project demonstrates the use of a dynamic block with conditional logic in Terraform. We are provisioning an Azure Resource Group and a Storage Account, with a conditional loop that allows us to set IP rules dynamically based on the provided input.
@@ -55,30 +51,6 @@ resource "azurerm_storage_account" "stg" {
 
 - `var.name`: The name prefix for the resource group and storage account.
 - `var.ips_allowed`: A list of IP addresses allowed to access the storage account. If this is `null`, no network rules will be applied.
-
-## Example Usage
-
-```hcl
-variable "name" {
-  type = string
-}
-
-variable "ips_allowed" {
-  type    = list(string)
-  default = null
-}
-
-module "storage_account" {
-  source = "./modules/storage"
-
-  name        = "example"
-  ips_allowed = ["10.0.0.1", "10.0.0.2"]
-}
-```
-
-In this example:
-- A resource group named `rg-example` and a storage account named `stgexample` will be created.
-- Network rules will be applied to allow only `10.0.0.1` and `10.0.0.2` access to the storage account.
 
 ## Prerequisites
 
